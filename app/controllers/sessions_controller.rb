@@ -6,7 +6,6 @@ class SessionsController < ApplicationController
 	  user = User.find_by_nickname(auth['info']['nickname']) || User.create_account(auth)
 	 
 	  session[:user_id] = user.id
-	  logger.debug auth.to_yaml
 	  redirect_to root_url, :notice => 'log in'
 	end
 	 
