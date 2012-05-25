@@ -6,7 +6,7 @@ timeout 120
 preload_app true
 
 app_name = "face3"
-base_path = "/home/face3/app"
+base_path = "/home/facetest/app"
 working_directory "#{base_path}/#{app_name}/current"
 pid "#{base_path}/#{app_name}/shared/pids/unicorn.pid"
 stderr_path "#{base_path}/#{app_name}/shared/log/unicorn.stderr.log"
