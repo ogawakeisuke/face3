@@ -12,7 +12,7 @@ ssh_options[:forward_agent] = true
 
 role :web, "133.242.48.15"                          # Your HTTP server, Apache/etc
 role :app, "133.242.48.15"                          # This may be the same as your `Web` server
-role :db,  "133.242.48.15"
+role :db,  "133.242.48.15",:primary => true
 
 set :default_environment, {
  'PATH' => "~/.rbenv/shims/:~/.rbenv/bin/:$PATH" #コロンはそれぞれパスを探している
