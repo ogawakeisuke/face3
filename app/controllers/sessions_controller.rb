@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
 	  user = User.find_by_nickname(auth['info']['nickname']) || User.create_account(auth)
 	 
 	  session[:user_id] = user.id
-	  redirect_to root_urls, :notice => 'log in'
+	  redirect_to root_url, :notice => 'log in'
 	end
 	 
 	def logout
